@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title id="title"></title>
+<meta http-equiv="refresh" content="2; url=$(link-redirect)">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="theme-color" content="#1FA2FF" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<script language="JavaScript">
+	function startClock() {
+	       $(if popup == 'true')open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290');
+	       $(endif)
+	       setTimeout(function () {
+	       location.href = '$(link-status)'}, 2000);
+	}
+	</script>
+</head>
+<body onLoad="startClock()">
+	<div class="container">
+		<div class="main">
+			<div class="circle"></div>
+			<div class="circle2"></div>
+			<div class="inner">
+				<div class="member height">
+					<div class="alogin">
+						<img src="img/customer.png" alt="">
+						<h1>Nos remerciement ! </h1>
+						<form action="">
+							<h3 id="user">$(username)</h3>
+						</form>
+						<h3>Vous etes connecter avec succes.</h3>
+						<button onclick="window.location = 'status.html';">CONTINUER</button>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</div>
+
+
+
+
+<script type="text/javascript">
+	document.getElementById('title').innerHTML = window.location.hostname + " > redirect";
+</script>
+</body>
+</html>

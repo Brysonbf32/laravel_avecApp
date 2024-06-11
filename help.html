@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/help.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="circle"></div>
+            <div class="circle2"></div>
+            <div class="inner">
+                <div class="head">
+                    <button onclick="window.location = 'login.html'"><i class="fa fa-chevron-circle-left"></i></button>
+                    <h1>Service client</h1>
+                </div>
+                <!-- Paket member -->
+                <div class="member height">
+                    <div class="accordion-wrapper" style="margin-top: 10px;">
+                        <div class="accordion">
+                            <input type="radio" name="radio-a" id="check1" checked>
+                            <label class="accordion-label" for="check1">1. Comment se connecter</label>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li>Assurez-vous que votre zone est couverte par notre signal wifi</li>
+                                    <li>Activez le wifi sur votre smartphone ou ordinateur portable et connectez-vous sur SharedNet </li>
+                                    <li>Attendez quelques instants jusqu'à ce que la notification contextuelle de connexion apparaisse,
+                                        S'il n'y a pas de notification, veuillez ouvrir l'application du navigateur (Chrome, Mozilla) sur votre smartphone 
+                                        ou ordinateur portable et saisir manuellement le lien de la page de connexion indiquée sur le jeton.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <input type="radio" name="radio-a" id="check2">
+                            <label class="accordion-label" for="check2">2. En cas d'erreur</label>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li> <b>Code de Jeton incorrect :</b> Cette notification apparaît lorsque vous saisissez incorrectement les informations du jeton. Veuillez toujours faire attention aux lettres majuscules, minuscules et chiffres.</li>
+                                    <li> <b>Le temps d'activité a expiré :</b> Cet avertissement apparaîtra si la validite de votre jeton a atteint sa limite.</li>
+                                    <li><b>Ce code a été utilisé :</b> Si cette notification apparaît, cela signifie que le jeton que vous avez saisi a été utilisé par un autre utilisateur, 1 code de jeton ne peut être utilisé que sur 1 seul appareil.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <input type="radio" name="radio-a" id="check3">
+                            <label class="accordion-label" for="check3">3. Calcul de la période active</label>
+                            <div class="accordion-content">
+                                <ul>
+                                    <li> <b>La période active du Jeton se calcul </b> à partir de la première fois que vous vous connectez </li>
+                                    <li> La validite du <b> Jeton </b> est répertoriée par <b> la durée </b> et le <b> Temps. </b> Ainsi la méthode de calcul est la suivante, 
+                                        par exemple <b> la durée d'unejournee, periode active 1 jour </b>
+                                        ce qui signifie que le jeton peut être utilisé pendant 1 jour si tu as toujours du temps, le jeton
+                                        ne peut être utilisé que pendant une journée au maximum après sa première activation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <input type="radio" name="radio-a" id="check4">
+                            <label class="accordion-label" for="check4">4. Conseils pour choisir un Jeton</label>
+                            <div class="accordion-content">
+                            <ul>
+                                <li> Nous proposons différentes options de forfait, s'il vous plaît <a href="login.html"> Vérifiez ici</a></li>
+                                <li>Si votre région est couvert <b> d'un signal de bonne qualité </b> mieux vaut choisir <b>
+                                    le forfait </b> Hebdomadaire ou Mensuel</li>
+                                <li>Tous nos forfaits internet sont <b> Illimités et sans conditions</b> 
+                                    pour n'importe quoi : <b>Streaming, Navigation, Chat, Téléchargement</b></li>
+                            </ul>
+                            </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

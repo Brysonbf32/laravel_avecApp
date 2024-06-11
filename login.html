@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="memberJ()">
+    <div class="container">
+        $(if error)
+        <div id="infoError" class="infoError">
+            <script type="text/javascript">
+                var error = "$(error)";
+                var error1 = "user $(username) has reached uptime limit";
+                var error2 = "user $(username) has reached traffic limit";
+                var error3 = "no valid profile found";
+                var error4 = "invalid username or password";
+                var error5 = "user &lt;$(username)&gt; not found";
+                var error6 = "simultaneous session limit reached";
+                var error7 = "no more sessions are allowed for user $(username)"
+                if (error == error1 || error == error2 || error == error3) {
+                document.getElementById("infoError").innerHTML = '<i class="fa fa-info-circle"></i> Masa Aktif Voucher anda sudah habis';
+                } else if (error == error4) {
+                document.getElementById("infoError").innerHTML = '<i class="fa fa-info-circle"></i> Member atau Voucher salah atau tidak terdaftar di server kami';
+                } else if (error == error5) {
+                document.getElementById("infoError").innerHTML = '<i class="fa fa-info-circle"></i> Member atau Voucher Tidak Ditemukan';
+                } else if (error == error6) {
+                document.getElementById("infoError").innerHTML = '<i class="fa fa-info-circle"></i> Jumlah Session Login Telah Dibatasi';
+                } else if (error == error7) {
+                document.getElementById("infoError").innerHTML = '<i class="fa fa-info-circle"></i> Member atau Voucher sedang digunakan di perangkat lain';
+                } else {
+                document.getElementById("infoError").innerHTML = '<i class="fa fa-info-circle"></i> $(error)';
+                }
+            </script>
+        </div>
+        $(endif)
+        <div class="main">
+            <!-- Circle -->
+            <div class="circle"></div>
+            <div class="circle2"></div>
+
+            <!-- Top -->
+            <div class="top">
+               
+                <h1>WORLD TECHNOLOGY</h1>
+                <h2>Shared Network</h2>
+            </div>
+
+            <!-- Midle -->
+            <div class="middle">
+                <!-- Left menu -->
+                <div class="leftmenu">
+                    <button onclick="window.location = 'beli.html';"> <i class="fa fa-shopping-bag c1"></i> Prix Forfaits</button>
+                    <button onclick="window.location = 'agen.html';"> <i class="fa fa-street-view c4"></i> Contact Agents</button>
+                    <button onclick="window.location = 'bayar.html';"> <i class="fa fa-dollar c3"></i> Modes Paiements</button>
+                    <button onclick="window.location = 'contact.html';"> <i class="fa fa-address-book-o c5"></i>Contact Admin</button>
+                    <button onclick="window.location = 'help.html';"> <i class="fa fa-microphone c7"></i> Guide Utilisation</button>
+                </div>
+
+                <!-- Right Menu -->
+                <div class="rightmenu">
+                    <!-- banner -->
+                    <div class="banner">
+                        <img src="img/006-internet.png" alt="">
+                        <h1>World Technology vous offre, l'internet rapide <br> et moin couteux</h1>
+                    </div>
+
+                    <!-- Tombol atas -->
+                    <div class="btn-top">
+                        <button id="qr" class="bg1" onclick="window.location='https://laksa19.github.io/myqr';"><i class="fa fa-qrcode"></i>Code QR </button>
+                        <button id="btnmem" class="bg2" onclick="member();"><i class="fa fa-user-secret" ></i> Jeton</button>
+                        <button id="btnvrc" class="bg3" onclick="voucher();"><i class="fa fa-ticket" ></i> Carte</button>
+                        $(if trial == 'yes')
+                        <button class="bg5" onclick="location.href = '$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)';"><i class="fa fa-unlock"></i> Essaie gratuis</button>
+                        $(else)
+                        $(endif)
+                    </div>
+
+                    <!-- Form Voucher -->
+                    <div class="voucher-form">
+                        <form autocomplete="off" name="login"  method="post" $(if chap-id) onSubmit="return doLogin()"
+                        $(endif)>
+                            <input type="hidden" name="dst" value="$(link-orig)" />
+                            <input type="hidden" name="popup" value="true" />
+                            <input name="username" type="text" value="$(username)"  />
+                            <input name="password" placeholder="Password" type="hidden"  />
+                            <button type="submit">Connexion <i class="fa fa-sign-in"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Slide Paket -->
+                    <div class="paket">
+                        <h4>Nos cartes de forfait</h4>
+                        <div class="paketform">
+                            <div class="paketslide">
+                                <div class="paket-card bg5">
+                                    <h1>Une Journée</h1>
+                                    <h2>1000 Fc</h2>
+                                    <h3> Connexion Illimitée</h3>
+                                    <img src="img/004-smartphone.png" alt="">
+                                </div>
+                                <div class="paket-card bg6">
+                                    <h1>Trois Journées</h1>
+                                    <h2>2500 Fc</h2>
+                                    <h3>Connexion Illimitée</h3>
+                                    <img src="img/004-smartphone.png" alt="">
+                                </div>
+                                <div class="paket-card bg7">
+                                    <h1>Une Semaine</h1>
+                                    <h2>5000 Fc</h2>
+                                    <h3>Connexion Illimitée</h3>
+                                    <img src="img/004-smartphone.png" alt="">
+                                </div>
+                                <div class="paket-card bg8">
+                                    <h1>Un Mois</h1>
+                                    <h2>20 000 Fc</h2>
+                                    <h3>Connexion Illimitée</h3>
+                                    <img src="img/004-smartphone.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end Slide paket -->
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- Modal Pop Up -->
+    $(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<script type="text/javascript" src="md5.js"></script>
+    <script type="text/javascript">
+		function doLogin() {
+			document.sendin.username.value = document.login.username.value;
+			document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value +
+			'$(chap-challenge)');
+			document.sendin.submit();
+			return false;
+			}
+    </script>
+$(endif)
+
+<script type="text/javascript">
+    document.login.username.focus();
+    var username = document.login.username;
+    var password = document.login.password;
+    
+    username.placeholder = "Masukkan Kode Voucher";
+    function setpass() {
+        var user = username.value
+        //user = user.toLowerCase();
+        username.value = user;
+        password.value = user;
+    }
+    
+    username.onkeyup = setpass;
+    function voucher() {
+        username.focus();
+        username.onkeyup = setpass;
+        username.placeholder = "Masukkan Kode Voucher";
+        password.type = "hidden";
+    }
+    
+    function member() {
+        username.focus();
+        username.onkeyup = "";
+        username.placeholder = "Username";
+        password.type = "password";
+    }
+    </script>
+</body>
+</html>
